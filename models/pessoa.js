@@ -15,7 +15,7 @@ class Pessoa {
   static async insert(data) {
     try {
       const connect = await db.connect();
-      const sql = "";
+      const sql = "insert into pessoas ( id, nome, idade, uf )values( 1327, felipe, 18, ms)";
       const values = [data.nome, data.idade, data.uf];
       return await connect.query(sql, values);
     } catch (error) {
