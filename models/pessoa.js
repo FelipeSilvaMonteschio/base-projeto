@@ -4,7 +4,7 @@ class Pessoa {
   static async select() {
     try {
       const connect = await db.connect();
-      const sql = "select * from pessoas"
+      const sql = "select nome,idade from pessoas"
       return await connect.query(sql);
     } catch (error) {
       console.error('Erro em select:', error);
