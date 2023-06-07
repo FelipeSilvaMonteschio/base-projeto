@@ -7,7 +7,7 @@ let connect = async function () {
     }
 
     const pool = new Pool({
-      connectionString: 'postgres://postgres:1234@localhost/projetoFinal'
+      connectionString: 'postgres://postgres:postgres@localhost/projeto-produto-final'
     });
 
     global.connection = pool;

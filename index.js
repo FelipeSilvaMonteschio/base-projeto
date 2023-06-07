@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.get('/pessoas', async function(req, res){
+app.get('/produtos', async function(req, res){
   try {
     var pessoas = await Pessoa.select();
     res.json(pessoas.rows);
@@ -25,7 +25,7 @@ app.get('/pessoas', async function(req, res){
 });
 
 
-app.post('/pessoas', async function(req, res){
+app.post('/produtos', async function(req, res){
   try {
     var pessoas = await Pessoa.insert(req.body);
     res.json(pessoas.rows);
@@ -37,7 +37,7 @@ app.post('/pessoas', async function(req, res){
 
 
 
-app.delete('/pessoas', async function(req, res){
+app.delete('/produtos', async function(req, res){
   try {
     var pessoas = await Pessoa.delete(req.body.id);
     res.json(pessoas.rows);
